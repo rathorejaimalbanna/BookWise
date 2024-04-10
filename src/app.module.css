@@ -21,7 +21,8 @@ body{
 .iconsDiv{
     display:flex;
     justify-content: space-evenly;
-    width: 40%
+    width: 40%;
+    margin-right: 10%;
 }
 .searchBar{
     width: 100vw;
@@ -63,6 +64,10 @@ body{
 .filterItems{
     display: flex;
     justify-content: space-around;
+}
+.filterIcon{
+    width: 60px;
+    height: 60px;
 }
 .filterSection{
     width: 100vw;

@@ -28,7 +28,7 @@ export default function Aside() {
       <ul className={styles.filterItems}>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Men's Fashion */}
-          <CheckBox option="Men's Fashion" handleChange={handleChange} />
+          <CheckBox option="Men's Fashion" handleChange={handleChange} /><img className={styles.filterIcon} src="./images/biography.png" alt="" />
         </li>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Women's Fashion */}
