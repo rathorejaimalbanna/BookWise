@@ -32,15 +32,15 @@ export default function Aside() {
         </li>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Women's Fashion */}
-          <CheckBox option="Women's Fashion" handleChange={handleChange} />
+          <CheckBox option="Women's Fashion" handleChange={handleChange} /><img className={styles.filterIcon} src="./images/monitor.png" alt="" />
         </li>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Books */}
-          <CheckBox option="Books" handleChange={handleChange} checked/>
+          <CheckBox option="Books" handleChange={handleChange} checked/><img className={styles.filterIcon} src="./images/book.png" alt="" />
         </li>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Electronics */}
-          <CheckBox option="Electronics" handleChange={handleChange} />
+          <CheckBox option="Electronics" handleChange={handleChange} /><img className={styles.filterIcon} src="./images/trophy.png" alt="" />
         </li>
       </ul>
     </div>
