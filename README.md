@@ -28,10 +28,13 @@ React
 Redux Toolkit
 CSS Modules
 
-Installation
-Clone the repository
-Navigate to the project directory
-Install dependencies
+# Installation
+Clone the repository.
+
+Navigate to the project directory.
+
+Install dependencies.
+
 Start the development server
 
 # Usage
