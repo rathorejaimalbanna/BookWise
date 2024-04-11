@@ -86,7 +86,7 @@ function ProductCard(props) {
         {props.type === "product" && (
           <Button
             className={styles.showButton}
-            onClick={props.handleShow}
+            onClick={()=>{props.handleShow(props.item)}}
           >
             View
           </Button>

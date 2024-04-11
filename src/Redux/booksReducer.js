@@ -1,22 +1,35 @@
+// Import necessary functions from Redux Toolkit.
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+// Define the initial state for the books slice of the store.
 const INITIAL_STATE = {
-    books:[]
+    books: []
 };
 
-export const bookAsync = createAsyncThunk("fetchBooksAsync",async(state,action)=>{
+// Define an async thunk to fetch books data from an API.
+export const bookAsync = createAsyncThunk("fetchBooksAsync", async (state, action) => {
+    // Fetch books data from a specified API endpoint.
     const res = await fetch("https://d1krvzwx5oquy1.cloudfront.net/books.json");
+    // Convert the response to JSON format.
     const data = await res.json();
-    return data
-})
+    // Return the fetched data.
+    return data;
+});
 
+// Create a slice for managing books data in the Redux store.
 export const bookSlice = createSlice({
-    name:"booksData",
-    initialState:INITIAL_STATE,
-    extraReducers:(builder)=> builder.addCase(bookAsync.fulfilled,(state,action)=>{
-        state.books = action.payload
+    // Name of the slice
+    name: "booksData",
+    // Initial state
+    initialState: INITIAL_STATE,
+    // Extra reducers for handling additional actions
+    extraReducers: (builder) => builder.addCase(bookAsync.fulfilled, (state, action) => {
+        // Update the state with fetched books data when the async action is fulfilled.
+        state.books = action.payload;
     })
 });
 
+// Export the reducer function for the books slice.
 export const bookReducer = bookSlice.reducer;
-export const bookSelectors = (state) => state.bookReducer
+// Selector function to access books data from the store state.
+export const bookSelectors = (state) => state.bookReducer;

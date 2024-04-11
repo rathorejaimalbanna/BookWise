@@ -8,6 +8,7 @@ import { filterActions, filterSelectors } from '../../Redux/filterReducer';
 import { userSelectors } from '../../Redux/userReducer';
 import { collection, getDocs, doc, setDoc,updateDoc } from "firebase/firestore";
 import { bookAsync, bookSelectors } from '../../Redux/booksReducer';
+import Modal from '../modal';
 
 
 // Product component fetches and renders product data
@@ -15,6 +16,7 @@ export default function Product() {
   // State to store fetched product data
   const {books} = useSelector(bookSelectors)
   const [docs, setDocs] = useState([]);
+  const [info,setInfo] = useState([])
   const [show,setShow]  = useState(false)
   const dispatch = useDispatch()
   // Retrieve userData and filter from context
@@ -81,18 +83,16 @@ export default function Product() {
   if (docs.length === 0) {
     return (<><h2>Loading.....</h2></>);
   };
-  function handleShow(){
+  function handleShow(info){
     setShow(!show)
+    setInfo(info)
   }
 
   return (
     <>
     {show && <div className={styles.showDiv}>
-      <div className={styles.innerShowDiv}>
-        <div className={styles.showImgDiv}></div>
-        <div className={styles.showDetailsDiv}></div>
-        <button onClick={handleShow}> close </button>
-      </div>
+        <button className={styles.closeButton} onClick={handleShow}> close </button>
+      <Modal info={info} />
       </div>}
       {/* Render ProductCard for each product */}
       <div className={styles.outerCardDiv}>
