@@ -8,12 +8,19 @@ https://bookwise-ea981.web.app/
 
 # Features
 Display book title, author, availability, description, and published date.
+
 Login/Logout
+
 Add products to cart.
+
 Remove products from cart.
+
 Increase product quantity.
+
 Order products from cart.
+
 Responsive design.
+
 Fetch book data from the Google Books API.
 
 # Technologies Used
