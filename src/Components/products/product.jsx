@@ -91,7 +91,7 @@ export default function Product() {
   return (
     <>
     {show && <div className={styles.showDiv}>
-        <button className={styles.closeButton} onClick={handleShow}> close </button>
+        <button className={styles.closeButton} onClick={handleShow}> <img style={{width:"30px",height:"30px"}} src="./images/button.png" alt="" /> </button>
       <Modal info={info} />
       </div>}
       {/* Render ProductCard for each product */}

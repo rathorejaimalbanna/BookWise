@@ -130,6 +130,7 @@ body{
 }
 .closeButton{
     margin-left: 50%;
+    background-color: transparent;
 }
 .innerShowDiv::before{
     content: "";
@@ -366,7 +367,7 @@ th{
         width: 100vw !important;
     }
     .closeButton{
-        margin-left: 80%;
+        margin-left: 80%
     }
     .outerCardDiv{
         display: flex;
