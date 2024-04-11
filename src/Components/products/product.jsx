@@ -15,6 +15,7 @@ export default function Product() {
   // State to store fetched product data
   const {books} = useSelector(bookSelectors)
   const [docs, setDocs] = useState([]);
+  const [show,setShow]  = useState(false)
   const dispatch = useDispatch()
   // Retrieve userData and filter from context
   const userData = useSelector(userSelectors)
@@ -79,14 +80,24 @@ export default function Product() {
   // Render loading message if product data is not available
   if (docs.length === 0) {
     return (<><h2>Loading.....</h2></>);
+  };
+  function handleShow(){
+    setShow(!show)
   }
 
   return (
     <>
+    {show && <div className={styles.showDiv}>
+      <div className={styles.innerShowDiv}>
+        <div className={styles.showImgDiv}></div>
+        <div className={styles.showDetailsDiv}></div>
+        <button onClick={handleShow}> close </button>
+      </div>
+      </div>}
       {/* Render ProductCard for each product */}
       <div className={styles.outerCardDiv}>
       {docs.map((item, id) => 
-        <ProductCard key={id} item={item} addCart={addCart} type="product"/>
+        <ProductCard key={id} item={item} addCart={addCart} type="product" handleShow={handleShow}/>
       )}
       </div>
     </>
