@@ -1,13 +1,18 @@
 
 
  # Book Viewer App 
-This is a simple React application that allows users to view information about books fetched from an external API.
+This is a React application made using redux toolkit and react bootstrap that allows users to view information about books fetched from an external API.
 
 # Hosted Link
 https://bookwise-ea981.web.app/
 
 # Features
 Display book title, author, availability, description, and published date.
+Login/Logout
+Add products to cart
+Remove products from cart
+Increase product quantity
+Order products from cart
 Responsive design.
 Fetch book data from the Google Books API.
 
