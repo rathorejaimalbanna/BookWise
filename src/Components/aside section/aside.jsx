@@ -24,23 +24,29 @@ export default function Aside() {
 
   return (
     <div className={styles.filterSection}>
+    {/* <ul className={styles.filterItems}>
+      <li className={styles.filterLineItem} ><img className={styles.filterIcon} src="./images/biography.png" alt="" /></li>
+      <li className={styles.filterLineItem}><img className={styles.filterIcon} src="./images/monitor.png" alt="" /></li>
+      <li className={styles.filterLineItem}><img className={styles.filterIcon} src="./images/book.png" alt="" /></li>
+      <li className={styles.filterLineItem}><img className={styles.filterIcon} src="./images/trophy.png" alt="" /></li>
+    </ul> */}
       {/* Render filter options */}
       <ul className={styles.filterItems}>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Men's Fashion */}
-          <CheckBox option="Men's Fashion" handleChange={handleChange} /><img className={styles.filterIcon} src="./images/biography.png" alt="" />
+          <CheckBox option="Biography & Autobiography" img="./images/biography.png" handleChange={handleChange} />
         </li>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Women's Fashion */}
-          <CheckBox option="Women's Fashion" handleChange={handleChange} /><img className={styles.filterIcon} src="./images/monitor.png" alt="" />
+          <CheckBox option="Computers" img="./images/monitor.png" handleChange={handleChange} />
         </li>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Books */}
-          <CheckBox option="Books" handleChange={handleChange} checked/><img className={styles.filterIcon} src="./images/book.png" alt="" />
+          <CheckBox option="Fiction" img="./images/book.png" handleChange={handleChange} checked/>
         </li>
         <li className={styles.filterLineItem}>
           {/* Render checkbox for Electronics */}
-          <CheckBox option="Electronics" handleChange={handleChange} /><img className={styles.filterIcon} src="./images/trophy.png" alt="" />
+          <CheckBox option="Sports & Recreation" img="./images/trophy.png" handleChange={handleChange} />
         </li>
       </ul>
     </div>

@@ -13,6 +13,12 @@ body{
     box-shadow: 0 2px 8px 0 rgba(178, 177, 177, 0.997);
     margin-bottom: 5px;
 }
+.brand{
+    color: rgb(196,40,29);
+    font-weight: 700;
+    margin-left:-30px;
+    margin-right:30px;
+}
 .search{
     border-radius: 5px;
     width: 50%;
@@ -90,11 +96,13 @@ body{
     height: 40px;
 }
 .cardsDiv{
-     width:18rem;
-      margin: 3%
+     width:13rem;
+      margin: 3%;
+      margin-top: 1%;
+      max-height: 55vh;
 }
 .cardImage{
-    max-height:250px;
+    max-height:180px;
      max-width:100%
 }
 /* SignIN page */
@@ -106,7 +114,8 @@ body{
 }
 .link{
     text-decoration: none;
-    color:gray
+    color:gray;
+    margin-left: 10px;
 }
 .formDiv{
     height: auto;
@@ -260,6 +269,10 @@ th{
         flex-direction: column;
         margin-top: 5px;
     }
+    .brand{
+        margin-right: 0;
+        margin-left: 0;
+    }
     .link{
         margin-top: 18px;
     }
@@ -267,7 +280,7 @@ th{
         width: 20px;
         height: 20px;
     }
-    .aside{
+    .filter{
         display: none;
     }
     .products{

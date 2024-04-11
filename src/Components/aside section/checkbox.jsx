@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
+import styles from "../../app.module.css"
 
 // CheckBox component renders a checkbox option
 function CheckBox(props) {
@@ -10,7 +11,12 @@ function CheckBox(props) {
         <Form.Check 
           type='checkbox'
           id={props.option}
-          label={props.option}
+          label={
+            <div style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
+              <img src={props.img} alt="Description"  className={styles.filterIcon}/>
+              <p> {props.option}</p>
+            </div>
+          }
           onChange={() => { props.handleChange(props.option) }}
         />
       </div>

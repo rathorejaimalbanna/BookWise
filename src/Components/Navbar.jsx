@@ -28,7 +28,7 @@ function Header() {
           <Container>
             <Navbar.Brand
               href="/"
-              style={{ color: "rgb(196,40,29)", fontWeight: "700" }}
+              className={styles.brand}
             >
               <img
                 src="./images/open-book.png"
