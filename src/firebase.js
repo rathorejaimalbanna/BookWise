@@ -9,7 +9,7 @@ export const provider = new GoogleAuthProvider();
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCUJpF0FcyScyB92UjqrUydOi5e5DLxLaU",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "bookwise-ea981.firebaseapp.com",
   projectId: "bookwise-ea981",
   storageBucket: "bookwise-ea981.appspot.com",
