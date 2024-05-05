@@ -1,14 +1,10 @@
 {
   "hosting": {
-    "headers": [
-      {
-        "source": "*",
-        "headers": [
-          "Access-Control-Allow-Origin",
-          "Access-Control-Allow-Methods",
-          "Access-Control-Allow-Headers"
-        ]
-      }
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ],
     "rewrites": [
       {
@@ -18,4 +14,3 @@
     ]
   }
 }
-
